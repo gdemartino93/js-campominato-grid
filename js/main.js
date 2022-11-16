@@ -1,32 +1,31 @@
 const BTNPLAY=document.getElementById("play");
 const CONTAINER= document.querySelector(".container");
 const SCELTA= document.getElementById("difficult");
+
 // dichiaro tasto play, container e la scelta della difficoltà
 
-let valueDifficult= 0;
-// dichiaro valore di difficoltà
-if (SCELTA.value == "ez"){
-    valueDifficult = 101;
-    
-}
-if (SCELTA.value == "normal"){
-    valueDifficult= 82;
-}
-if (SCELTA.value == "hard"){
-    valueDifficult= 50;
-}
 // dichiaro tasto e container
 
-
-for( let i = 1; i < valueDifficult; i++){
-    let box= document.createElement("div");
-    box.innerHTML=`${i}`
-    BTNPLAY.addEventListener("click",
-        function(){
+BTNPLAY.addEventListener("click",
+    function(){
+        CONTAINER.innerHTML=""
+        let valueDifficult= 0;
+        if (SCELTA.value == "ez"){
+            valueDifficult = 101;
+        }
+        if (SCELTA.value == "normal"){
+            valueDifficult= 82;
+        }
+        if (SCELTA.value == "hard"){
+            valueDifficult= 50;
+        }
+        for( let i = 1; i < valueDifficult; i++){
+            let box= document.createElement("div");
+            box.innerHTML=`${i}`
             CONTAINER.append(box)
             box.classList.add("boxstyle")
-        }
-    )
+            
+
     box.addEventListener("click",
     function(){
         console.log(i)
@@ -46,3 +45,5 @@ for( let i = 1; i < valueDifficult; i++){
         box.classList.add("width-hard")
     }
 }
+        
+})
