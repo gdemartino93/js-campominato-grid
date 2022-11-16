@@ -94,6 +94,9 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
+.block{
+    display: block;
+}
 .boxstyle{
     width: 40px;
     height: 40px;
