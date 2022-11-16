@@ -7,12 +7,13 @@ let valueDifficult= 0;
 // dichiaro valore di difficoltà
 if (SCELTA.value == "ez"){
     valueDifficult = 101;
+    
 }
 if (SCELTA.value == "normal"){
-    valueDifficult= 51;
+    valueDifficult= 82;
 }
 if (SCELTA.value == "hard"){
-    valueDifficult= 31;
+    valueDifficult= 50;
 }
 // dichiaro tasto e container
 
@@ -31,4 +32,17 @@ for( let i = 1; i < valueDifficult; i++){
         console.log(i)
         this.classList.toggle("active")
     })
+    if (SCELTA.value == "ez"){
+        valueDifficult = 101;
+        box.classList.add("width-easy")
+        
+    }
+    if (SCELTA.value == "normal"){
+        valueDifficult= 82;
+        box.classList.add("width-mid")
+    }
+    if (SCELTA.value == "hard"){
+        valueDifficult= 50;
+        box.classList.add("width-hard")
+    }
 }
